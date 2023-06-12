@@ -66,7 +66,7 @@ app.delete('/orders/:id', checkOrderId, checkUrl, (request, response) => {
     return response.status(204).json()
 })
 
-app.get('/orders,:id', checkOrderId, checkUrl, (request, response) => {
+app.get('/orders/:id', checkOrderId, checkUrl, (request, response) => {
     const index = request.orderIndex
     const newOrder = orders[index]
     
@@ -74,7 +74,7 @@ app.get('/orders,:id', checkOrderId, checkUrl, (request, response) => {
 })
 
 
-app.patch('/orders,:id', checkOrderId, checkUrl, (request, response) => {
+app.patch('/orders/:id', checkOrderId, checkUrl, (request, response) => {
     const index = request.orderIndex
     const newOrder = orders[index]
 
