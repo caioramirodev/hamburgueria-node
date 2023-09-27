@@ -1,8 +1,11 @@
 const express = require('express')
 const uuid = require('uuid')
-const port = 3000
+const port = 3001
 const app = express()
+const cors = require('cors')
+
 app.use(express.json())
+app.use(cors())
 
 const orders = []
 
@@ -84,5 +87,5 @@ app.patch('/orders/:id', checkOrderId, checkUrl, (request, response) => {
 })
 
 app.listen(port, () => {
-    console.log(`🏈 Server start on port ${3000}`)
+    console.log(`🏈 Server start on port ${3001}`)
 })
